@@ -1,0 +1,9 @@
+SCREEN 11: CLS : PI = 3.141593
+WINDOW (-4, -3)-(4, 3)
+A = .05: B = .1 'STARTING POINT AND GROWTH RATE
+PSET (A, 0)
+FOR T = 0 TO 42 STEP .1: R = A * EXP(B * T)
+X = R * COS(T): Y = R * SIN(T)
+LINE -(X, Y)
+NEXT T: A$ = INPUT$(1): END
+
